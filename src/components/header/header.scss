@@ -1,0 +1,97 @@
+@import "../../styles/mixins.scss";
+
+.header {
+  background-color: #ffe600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0px;
+
+  .logo {
+    width: 50px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 68%;
+    height: 32px;
+    border-radius: 2px;
+    margin-left: 10px;
+
+    .search-input {
+      width: 85%;
+      height: 100%;
+      border: none;
+      outline: none;
+      font-size: 12px;
+      padding-left: 5px;
+    }
+
+    .search-btn {
+      background-image: url('../../assets/img/header/ic_Search@2x.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 45% 45%;
+      background-color: #eee;
+      width: 15%;
+      height: 100%;
+      cursor: pointer;
+    }
+  }
+}
+
+@include mobile-m {
+  .header .search {
+    .search-btn {
+      background-size: 40%;
+    }
+  }
+}
+
+@include tablet {
+  .header .search {
+    .search-input {
+      width: 93%;
+    }
+
+    .search-btn {
+      width: 7%;
+    }
+  }
+}
+
+@include laptop {
+  .header {
+    .logo {
+      height: 36px;
+    }
+
+    .search {
+      width: 50%;
+      height: 36px;
+  
+      .search-input {
+        padding-left: 15px;
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+@include laptop-l {
+  .header .search {
+    .search-input {
+      width: 95%;
+    }
+
+    .search-btn {
+      width: 5%;
+    }
+  }
+}
