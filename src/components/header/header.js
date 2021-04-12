@@ -34,7 +34,7 @@ const Header = ({ parentHistory }) => {
   }
 
   const onKeyPressEnter = (e) => {
-    if (event.key === 'Enter') {
+    if (e.key === 'Enter') {
       redirectToItemSearch()
     }
   }
